@@ -44,7 +44,21 @@ nutritional_value_headers = ['Product', 'Kcal', 'Protein', 'Fat', 'Carbohydrates
 
 data_frame_nv2 = pd.DataFrame(nutritional_value, columns=nutritional_value_headers)
 
-print(data_frame_nv2.head())
+#result = data_frame_nv2[data_frame_nv2['Kcal'] < 100]
+
+#result = data_frame_nv2[data_frame_nv2['Protein'] > 15]
+
+result = data_frame_nv2[
+    (data_frame_nv2['Protein'] > 10)
+    &
+    (data_frame_nv2['Kcal'] < 200)
+]
+
+print(result)
+
+
+
+
 
 
 
